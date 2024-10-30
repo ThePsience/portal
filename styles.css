@@ -1,5 +1,5 @@
 body {
-  background-color: red;
+  background-color: hsl(0, 100%, 30%);
 }
 * {
   box-sizing: border-box;
@@ -12,7 +12,7 @@ nav {
   display: flex; /* 1 */
   justify-content: space-between; /* 2 */
   padding: 1rem 2rem; /* 3 */
-  background: #0b3c7a; /* 4 */
+  background: hsl(210, 100%, 20%); /* 4 */
 }
 
 nav ul {
@@ -39,8 +39,8 @@ a {
 
 header,
 footer {
-  border-top: 2px solid #3498db;
-  background-color: #0b3c7a;
+  border-top: 2px solid hsl(210, 100%, 40%);
+  background-color: hsl(210, 100%, 20%);
   color: white;
   text-align: center;
   padding: 1.25rem;
@@ -63,18 +63,20 @@ footer {
 }
 .cards {
   display: flex;
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
   padding: 1rem;
 }
 
 .card {
-  width: 250px;
-  height: 350px;
+  width: 350px;
+  height: 250px;
   perspective: 800px;
   border-style: none;
+  flex-grow: 1;
+  max-width: 25%;
 }
 
 .card-inner {
@@ -94,24 +96,26 @@ footer {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  text-align: center;
+  text-align: left;
 }
 
 .card-front {
   background-color: #e9e9e9;
   color: #333;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
   border-radius: 10px;
 }
 
 .card-back {
-  background-color: #767676;
+  background-color: #acacac;
   color: #fff;
   transform: rotateY(180deg);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
   border-radius: 10px;
 }
